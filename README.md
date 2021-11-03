@@ -13,7 +13,7 @@ Choose data and filter for a dataset to analyze
 Chicago.csv, new_york_city.csv and washington.csv
 
 ### Credits
-https://realpython.com/pandas-dataframe/
-https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
+1. https://realpython.com/pandas-dataframe/
+1. https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python
 
 
