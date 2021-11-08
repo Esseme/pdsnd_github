@@ -7,6 +7,13 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+def get_city(city):
+    while (city.title() != "Chicago" and city.title() != "New York" and city.title() != "Washington"):
+        city = input("Which city would you like to explore? Options: chicago, new york, washington\n")
+        city = city.lower()
+    return city
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -20,9 +27,7 @@ def get_filters():
     
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = ""
-    while (city.title() != "Chicago" and city.title() != "New York" and city.title() != "Washington"):
-        city = input("Which city would you like to explore? Options: chicago, new york, washington\n")
-        city = city.lower()
+    city = get_city(city)
     print("Looks like you want to learn more about {}! If this is not true, restart the program".format(city.title()))
     
     # get user input for filter to use
@@ -32,7 +37,7 @@ def get_filters():
         filter_type = input("Would you like to filter by month, day, both or no filter at all? Type \"none\" for no filter.\n")
         
 
-    # get user input for month (all, january, february, ... , june)
+    # get user input for month (options: all, january, february, ... , june)
     if (filter_type == "month" or filter_type == "both"):
         if (filter_type == "month"):
             day = "all"
