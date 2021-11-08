@@ -32,7 +32,7 @@ def get_filters():
         filter_type = input("Would you like to filter by month, day, both or no filter at all? Type \"none\" for no filter.\n")
         
 
-    # get user input for month (all, january, february, ... , june)
+    # get user input for month (options: all, january, february, ... , june)
     if (filter_type == "month" or filter_type == "both"):
         if (filter_type == "month"):
             day = "all"
